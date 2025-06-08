@@ -3,48 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hello World with Tailwind</title>
+  <title>Hello World • Tailwind</title>
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Custom Theme Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui'],
+          },
+          colors: {
+            dark: '#0d1117',
+            light: '#f0f6fc',
+            accent: '#3fb950',
+          },
+        }
+      }
+    }
+  </script>
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans">
+<body class="bg-dark text-light font-sans">
 
-  <!-- Header Section -->
-  <div class="max-w-2xl mx-auto text-center py-16 px-4">
-    <h1 class="text-4xl font-bold mb-4">Hello, World!</h1>
-    <p class="text-lg text-gray-600">This is a simple Tailwind CSS-powered webpage.</p>
-  </div>
+  <!-- Hero Section -->
+  <section class="max-w-4xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-5xl font-bold leading-tight mb-4">Hello, World.</h1>
+    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+      Welcome to a modern, Tailwind-powered experience. Inspired by GitHub’s clean design language.
+    </p>
+  </section>
 
   <!-- About Section -->
-  <div class="max-w-2xl mx-auto py-8 px-4">
-    <h2 class="text-2xl font-semibold mb-4">About</h2>
-    <p class="text-gray-700">
-      Welcome to our simple webpage. We're just getting started with Tailwind CSS and web development.
-      This site is a demonstration of basic layout, utility classes, and form handling.
+  <section class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-800">
+    <h2 class="text-3xl font-semibold mb-4">About</h2>
+    <p class="text-gray-400 text-lg leading-relaxed">
+      This is a futuristic, responsive webpage styled using Tailwind CSS and inspired by GitHub’s feature pages. It’s minimal, fast, and highly readable — ideal for product landings, documentation, or portfolios.
     </p>
-  </div>
+  </section>
 
   <!-- Contact Form -->
-  <div class="max-w-2xl mx-auto py-8 px-4">
-    <h2 class="text-2xl font-semibold mb-6">Contact Us</h2>
+  <section class="max-w-4xl mx-auto px-6 py-16 border-t border-gray-800">
+    <h2 class="text-3xl font-semibold mb-8">Contact Us</h2>
     <form class="space-y-6">
       <div>
-        <label for="name" class="block text-sm font-medium text-gray-700">Name</label>
-        <input type="text" id="name" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your name">
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-medium text-gray-700">Email address</label>
-        <input type="email" id="email" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="name@example.com">
-      </div>
-      <div>
-        <label for="message" class="block text-sm font-medium text-gray-700">Message</label>
-        <textarea id="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-blue-500 focus:border-blue-500" placeholder="Your message"></textarea>
-      </div>
-      <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
-        Send
-      </button>
-    </form>
-  </div>
-
-</body>
-</html>
+        <label for="name" class="block text-sm font-medium text-gray-300">Name</label>
+        <input type="text" id="name" placeholder="Your name"
+          class="mt-1 w-full bg-dark border border-gray-700 rounded-lg p-3 te
